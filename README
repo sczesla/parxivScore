@@ -1,0 +1,44 @@
+                        parxivScore
+                     ----------------
+
+What is it?
+-----------
+
+    parxivScore is a small "app" to download the astro-ph RSS feed
+    and rate the thus obtained articles with respect to relevance.
+    The output is written to an HTML-formatted file.
+
+Installation and usage
+----------------------
+
+    parxivScore is a standalone script, i.e., download and put in
+    a place of your liking. In the simplest case use:
+
+        python parxivScore.py
+
+    Use the --help flag to see available parameters.
+
+Customizing scoring
+-------------------
+
+    The rating details are specified in a configuration file, of which a stub
+    is provided in the form of the 'parxiv.config' file. In particular, you are
+    free to define individual buzzwords to be searched for in the title and
+    abstract of the article, author surnames and -- optionally -- initials, and
+    the astro-ph subcategory. In general, buzzwords are given as regular
+    expressions. For each scoring rule such as a buzzword, you must provide a
+    relevance in form of an integer number, which measure the importance, which
+    you assign to the individual rule.
+
+    TIP: When the HTML-output is displayed by a browser, the rating details are
+         shown when hovering over the score value.
+
+Requirements
+------------
+
+    Beyond standard-library modules, parxivScore relies on numpy and feedparser.
+
+Licensing
+---------
+
+    parxivScore is released under the MIT license (see LICENSE.TXT).

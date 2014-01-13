@@ -58,7 +58,7 @@ class ParxivFeed:
     s = ""
     for i, c in enumerate(n):
       s += c
-      if (c == '.') and (n[i+1] != '-'):
+      if ((c == '.') and (len(c) > i+2)) and (n[i+1] != '-'):
         s += ' '
     parts = s.split()
     surname = []
